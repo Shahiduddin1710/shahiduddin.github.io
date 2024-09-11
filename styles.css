@@ -249,6 +249,7 @@ button:hover {
   text-align: justify; /* Justified text for a cleaner look */
 }
 
+/* Adjusting only the Education text */
 .about-right p b {
   color: #f4c430; /* Yellow color for highlighted text like labels */
   font-weight: bold;
@@ -618,22 +619,32 @@ body {
   font-size: 40px; /* Increased icon size */
 }
 
-.contact-item h3 {
-  margin-bottom: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
 
 .contact-item p {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.contact-item {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 150px;
+}
+
+.contact-item h3,
+.contact-item p {
+  margin: 0;
+  padding: 0;
+}
+
 .contact-item a {
+  display: block; /* Ensure the link takes full block space */
+  width: 100%; /* Makes the link width consistent */
+  text-align: center; /* Centers the email text */
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
 }
+
+
 
 /* Social links */
 .social-links {
@@ -653,48 +664,54 @@ body {
   color: #ffc107; /* Hover effect for social icons */
 }
 
-    /* Responsive Styles for Small Devices */
-    @media only screen and (max-width: 768px) {
-      /* Display the hamburger menu */
-      .menu-icon {
-        display: block;
-      }
+ /* Responsive Styles for Small Devices */
+@media only screen and (max-width: 768px) {
+  /* Display the hamburger menu */
+  .menu-icon {
+    display: block;
+  }
 
-      /* Hide the menu by default */
-      nav ul {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #222;
-        width: 100%;
-        display: none; /* Initially hidden */
-      }
+  /* Hide the menu by default */
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #222;
+    width: 100%;
+    display: none; /* Initially hidden */
+  }
 
-      /* Show the menu when the show class is added */
-      nav ul.show {
-        display: flex; /* Show the menu */
-      }
+  /* Show the menu when the show class is added */
+  nav ul.show {
+    display: flex; /* Show the menu */
+  }
 
-      /* Adjust the margin for the list items in small devices */
-      nav ul li {
-        margin: 10px 0;
-        text-align: center;
-      }
+  /* Adjust the margin for the list items in small devices */
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
 
-      /* Adjust anchor tag styles for smaller screens */
-      nav ul li a {
-        font-size: 1.5rem;
-        padding: 10px;
-      }
-    }
+  /* Adjust anchor tag styles for smaller screens */
+  nav ul li a {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
 
-/* Media Queries for Responsiveness */
+  /* Adjusting about-right section for smaller screens */
+  .about-right {
+    width: 90%;
+    padding: 1.5rem; /* Adjust padding */
+  }
 
-/* For small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 1rem;
+  .about-right h3 {
+    font-size: 1.8rem; /* Reduce font size for headers */
+  }
+
+  .about-right p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    line-height: 1.6; /* Adjust line height */
   }
 
   #about {
@@ -709,6 +726,27 @@ body {
 
   .projects {
     grid-template-columns: 1fr; /* Single column for mobile */
+  }
+}
+
+/* For small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .about-right {
+    width: 100%;
+    padding: 1rem; /* Further reduce padding */
+  }
+
+  .about-right h3 {
+    font-size: 1.5rem; /* Smaller font size for headers */
+  }
+
+  .about-right p {
+    font-size: 0.9rem; /* Smaller paragraph font size */
+    line-height: 1.5; /* Adjust line height for better readability */
   }
 }
 
@@ -733,3 +771,5 @@ body {
     grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
   }
 }
+
+
