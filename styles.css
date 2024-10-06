@@ -752,7 +752,7 @@ body {
 
 /* For medium devices (tablets, 768px and up) */
 
-/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #about .about-left, #about .about-right {
     width: 45%; 
   }
@@ -760,7 +760,7 @@ body {
   .projects {
     grid-template-columns: repeat(2, 1fr); 
   }
-} */
+} 
 
 
 /* For large devices (desktops, 1024px and up) */
